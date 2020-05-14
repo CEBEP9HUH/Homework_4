@@ -5,7 +5,7 @@ before_script:
 script:
 - mkdir gtest && cd gtest
 - cmake /usr/src/gtest/
-- cmake -- build .
+- cmake --build .
 - sudo cp *.a /usr/lib/
 - cd ..
 - mkdir build && cd build
