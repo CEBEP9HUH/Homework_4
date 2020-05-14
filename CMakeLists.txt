@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
-if(${TRAVIS_BUILD_NUMBER})
-    project(print_ip VERSION 0.0.${TRAVIS_BUILD_NUMBER})
+if($ENV{TRAVIS_BUILD_NUMBER})
+    project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 else()
     project(print_ip VERSION 0.0.42)
 endif()
