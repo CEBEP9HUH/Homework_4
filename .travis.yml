@@ -17,6 +17,7 @@ script:
 - cmake --build . --target package
 - mkdir html && cd html
 - doxygen ../Doxyfile.print_ip_doc
+- cd ..
 deploy:
 - provider: bintray
   file: description.json
