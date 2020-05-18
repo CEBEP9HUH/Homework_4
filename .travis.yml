@@ -25,6 +25,7 @@ deploy:
   key: $BINTRAY_API_KEY
   skip_cleanup: true
 - provider: pages
+  local_dir: html
   github_token: $GITHUB_TOKEN
   keep_history: true
   skip_cleanup: true
