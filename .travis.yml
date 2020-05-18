@@ -16,16 +16,17 @@ script:
 - ctest .
 - cmake --build . --target package
 - doxygen Doxyfile.print_ip_doc
+after_script:
 - ls
 deploy:
 - provider: bintray
   file: description.json
   user: $BINTRAY_USER
   key: $BINTRAY_API_KEY
-  skip_cleanup: true
+  cleanup: false
 - provider: pages
   local_dir: /home/travis/build/CEBEP9HUH/Homework_4/build/html/
-  skip_cleanup: true
+  cleanup: false
   github_token: $GITHUB_TOKEN
   keep_history: true
 
