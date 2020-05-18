@@ -15,6 +15,7 @@ script:
 - cmake --build .
 - ctest .
 - cmake --build . --target package
+- doxygen Doxyfile.print_ip_doc
 deploy:
 - provider: bintray
   file: description.json
