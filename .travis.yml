@@ -22,11 +22,11 @@ deploy:
   file: description.json
   user: $BINTRAY_USER
   key: $BINTRAY_API_KEY
-  cleanup: false
+  skip_cleanup: true
 - provider: pages
   local_dir: /home/travis/build/CEBEP9HUH/Homework_4/build/html/
   github_token: $GITHUB_TOKEN
   keep_history: true
-  cleanup: false
+  skip_cleanup: true
 
 
