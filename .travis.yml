@@ -2,7 +2,7 @@ dist: bionic
 language: cpp
 before_script:
 - sudo apt-get install libgtest-dev -y
-- sudo apt-get install doxyfile -y
+- sudo apt-get install doxygen -y
 - sudo apt-get install graphviz -y
 script:
 - mkdir gtest && cd gtest
