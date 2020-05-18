@@ -1,0 +1,32 @@
+dist: bionic
+language: cpp
+before_script:
+- sudo apt-get install libgtest-dev -y
+- sudo apt-get install doxygen -y
+- sudo apt-get install graphviz -y
+script:
+- mkdir gtest && cd gtest
+- cmake /usr/src/gtest/
+- cmake --build .
+- sudo cp *.a /usr/lib/
+- cd ..
+- mkdir build && cd build
+- cmake ..
+- cmake --build .
+- ctest .
+- cmake --build . --target package
+- mkdir html && cd html
+- doxygen ../Doxyfile.print_ip_doc
+- cd ..
+deploy:
+- provider: bintray
+  file: description.json
+  user: $BINTRAY_USER
+  key: $BINTRAY_API_KEY
+  skip_cleanup: true
+- provider: pages
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  skip_cleanup: true
+
+

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ip_printing.hpp
+ostream
+-
+vector
+-
+list
+-
+forward_list
+-
+type_traits
+-
+tuple
+-
+
+/home/travis/build/CEBEP9HUH/OTUS_Homework_4/source/main.cpp
+iostream
+-
+ip_printing.hpp
+/home/travis/build/CEBEP9HUH/OTUS_Homework_4/source/ip_printing.hpp
+
