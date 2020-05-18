@@ -23,10 +23,10 @@ deploy:
   file: description.json
   user: $BINTRAY_USER
   key: $BINTRAY_API_KEY
-  cleanup: false
+  skip_cleanup: true
 - provider: pages
   github_token: $GITHUB_TOKEN
   keep_history: true
-  cleanup: false
+  skip_cleanup: true
 
 
