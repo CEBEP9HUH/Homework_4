@@ -1,8 +1,0 @@
-/home/travis/build/CEBEP9HUH/OTUS_Homework_4/gtest/CMakeFiles/install/strip.dir
-/home/travis/build/CEBEP9HUH/OTUS_Homework_4/gtest/CMakeFiles/install/local.dir
-/home/travis/build/CEBEP9HUH/OTUS_Homework_4/gtest/CMakeFiles/install.dir
-/home/travis/build/CEBEP9HUH/OTUS_Homework_4/gtest/CMakeFiles/list_install_components.dir
-/home/travis/build/CEBEP9HUH/OTUS_Homework_4/gtest/CMakeFiles/gtest_main.dir
-/home/travis/build/CEBEP9HUH/OTUS_Homework_4/gtest/CMakeFiles/edit_cache.dir
-/home/travis/build/CEBEP9HUH/OTUS_Homework_4/gtest/CMakeFiles/gtest.dir
-/home/travis/build/CEBEP9HUH/OTUS_Homework_4/gtest/CMakeFiles/rebuild_cache.dir
