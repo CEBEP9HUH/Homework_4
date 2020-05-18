@@ -1,6 +1,14 @@
 #include <iostream>
 #include "ip_printing.hpp"
 
+
+/**
+ * @mainpage Print_ip
+ * This app is for converting different data types into ip address (OTUS homework #4).
+ **/
+/**
+ * @brief entrance point of programm
+ **/
 int main()
 {
     ip_printing::print_as_ip(char(-1));

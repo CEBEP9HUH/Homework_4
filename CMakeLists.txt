@@ -41,6 +41,16 @@ else()
     )
 endif()
 
+#doxygen
+find_package(Doxygen REQUIRED)
+set(DOXYGEN_OUTPUT_DIRECTORY)
+set(DOXYGEN_PROJECT_NUMBER ${VERSION})
+set(DOXYGEN_HAVE_DOT YES)
+set(DOXYGEN_EXTRACT_ALL YES)
+doxygen_add_docs(print_ip_doc 
+    ${INCLUDE} ${SOURCE} 
+)
+
 #Pack
 install(TARGETS print_ip RUNTIME DESTINATION bin)
 

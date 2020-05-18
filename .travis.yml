@@ -2,6 +2,8 @@ dist: bionic
 language: cpp
 before_script:
 - sudo apt-get install libgtest-dev -y
+- sudo apt-get install doxyfile -y
+- sudo apt-get install graphviz -y
 script:
 - mkdir gtest && cd gtest
 - cmake /usr/src/gtest/
@@ -14,9 +16,15 @@ script:
 - ctest .
 - cmake --build . --target package
 deploy:
-  provider: bintray
+- provider: bintray
   file: description.json
   user: $BINTRAY_USER
   key: $BINTRAY_API_KEY
   skip_cleanup: true
+- provider: pages
+  local_dir: /home/travis/build/CEBEP9HUH/Homework_4/build/html/
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+
 
