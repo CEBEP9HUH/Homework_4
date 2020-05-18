@@ -15,18 +15,15 @@ script:
 - cmake --build .
 - ctest .
 - cmake --build . --target package
-- doxygen Doxyfile.print_ip_doc
-after_script:
-- ls
+- mkdir html && cd html
+- doxygen ../Doxyfile.print_ip_doc
 deploy:
 - provider: bintray
   file: description.json
   user: $BINTRAY_USER
   key: $BINTRAY_API_KEY
-  cleanup: false
 - provider: pages
   local_dir: /home/travis/build/CEBEP9HUH/Homework_4/build/html/
-  cleanup: false
   github_token: $GITHUB_TOKEN
   keep_history: true
 
